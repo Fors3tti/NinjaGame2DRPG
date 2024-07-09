@@ -9,11 +9,13 @@ public class PlayerMovement : MonoBehaviour
 
     private PlayerActions actions;
     private Rigidbody2D rb2D;
+    private Animator animator;
     private Vector2 moveDirection;
 
     private void Awake()
     {
         actions = new PlayerActions();
+        animator = GetComponent<Animator>();
         rb2D = GetComponent<Rigidbody2D>();
     }
 
@@ -42,6 +44,9 @@ public class PlayerMovement : MonoBehaviour
     private void ReadMovement()
     {
         moveDirection = actions.Movement.Move.ReadValue<Vector2>().normalized;
+        if(moveDirection == Vector2.zero) return;
+        animator.SetFloat("MoveX", moveDirection.x);
+        animator.SetFloat("MoveY", moveDirection.y);
     }
 
     private void OnEnable()

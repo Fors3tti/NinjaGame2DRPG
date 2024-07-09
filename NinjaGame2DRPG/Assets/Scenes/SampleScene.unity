@@ -226,8 +226,8 @@ GameObject:
   - component: {fileID: 1512313811}
   - component: {fileID: 1512313810}
   - component: {fileID: 1512313813}
-  - component: {fileID: 1512313812}
   - component: {fileID: 1512313814}
+  - component: {fileID: 1512313812}
   m_Layer: 0
   m_Name: Player_Ninja
   m_TagString: Untagged
