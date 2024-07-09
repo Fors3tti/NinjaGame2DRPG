@@ -7,16 +7,18 @@ public class PlayerMovement : MonoBehaviour
     [Header("Config")]
     [SerializeField] private float speed;
 
+    private PlayerAnimations playerAnimations;
     private PlayerActions actions;
+    private Player player;
     private Rigidbody2D rb2D;
-    private Animator animator;
     private Vector2 moveDirection;
 
     private void Awake()
     {
+        player = GetComponent<Player>();
         actions = new PlayerActions();
-        animator = GetComponent<Animator>();
         rb2D = GetComponent<Rigidbody2D>();
+        playerAnimations = GetComponent<PlayerAnimations>();
     }
 
     // Start is called before the first frame update
@@ -38,6 +40,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Move()
     {
+        if (player.Stats.Health <= 0) return;
         rb2D.MovePosition(rb2D.position + moveDirection * (speed * Time.fixedDeltaTime));
     }
 
@@ -47,13 +50,11 @@ public class PlayerMovement : MonoBehaviour
 
         if(moveDirection == Vector2.zero)
         {
-            animator.SetBool("Moving", false);
+            playerAnimations.SetMoveBoolTransition(false);
             return;
         }
-
-        animator.SetBool("Moving", true);
-        animator.SetFloat("MoveX", moveDirection.x);
-        animator.SetFloat("MoveY", moveDirection.y);
+        playerAnimations.SetMoveBoolTransition(true);
+        playerAnimations.SetMoveAnimation(moveDirection);        
     }
 
     private void OnEnable()
