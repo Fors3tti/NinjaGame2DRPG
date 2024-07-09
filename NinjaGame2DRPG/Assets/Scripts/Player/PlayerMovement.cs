@@ -44,7 +44,14 @@ public class PlayerMovement : MonoBehaviour
     private void ReadMovement()
     {
         moveDirection = actions.Movement.Move.ReadValue<Vector2>().normalized;
-        if(moveDirection == Vector2.zero) return;
+
+        if(moveDirection == Vector2.zero)
+        {
+            animator.SetBool("Moving", false);
+            return;
+        }
+
+        animator.SetBool("Moving", true);
         animator.SetFloat("MoveX", moveDirection.x);
         animator.SetFloat("MoveY", moveDirection.y);
     }
