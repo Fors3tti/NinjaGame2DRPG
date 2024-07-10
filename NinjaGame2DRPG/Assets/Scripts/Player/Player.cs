@@ -8,4 +8,17 @@ public class Player : MonoBehaviour
     [SerializeField] private PlayerStats stats;
 
     public PlayerStats Stats => stats;
+
+    private PlayerAnimations playerAnimations;
+
+    private void Awake()
+    {
+        playerAnimations = GetComponent<PlayerAnimations>();
+    }
+
+    public void ResetPlayer()
+    {
+        stats.ResetPlayer();
+        playerAnimations.ResetPlayer();
+    }
 }
