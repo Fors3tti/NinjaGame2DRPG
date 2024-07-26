@@ -137,6 +137,7 @@ GameObject:
   - component: {fileID: 120834412}
   - component: {fileID: 120834416}
   - component: {fileID: 120834417}
+  - component: {fileID: 120834418}
   m_Layer: 6
   m_Name: Enemy_Bamboo
   m_TagString: Enemy
@@ -307,7 +308,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initState: 
-  states: []
+  states:
+  - ID: 
+    Actions:
+    - {fileID: 120834418}
+    Transitions: []
+--- !u!114 &120834418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 120834411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58b43007a3718604e9c58cafb9a82a3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1.5
+  wanderTime: 1
+  moveRange: {x: 2, y: 2}
 --- !u!1 &209070708
 GameObject:
   m_ObjectHideFlags: 0
@@ -1379,6 +1399,7 @@ GameObject:
   - component: {fileID: 430267790}
   - component: {fileID: 430267789}
   - component: {fileID: 430267794}
+  - component: {fileID: 430267795}
   m_Layer: 6
   m_Name: Enemy_Flam
   m_TagString: Enemy
@@ -1549,7 +1570,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initState: 
-  states: []
+  states:
+  - ID: 
+    Actions:
+    - {fileID: 430267795}
+    Transitions: []
+--- !u!114 &430267795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 430267788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58b43007a3718604e9c58cafb9a82a3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1.5
+  wanderTime: 1
+  moveRange: {x: 2, y: 2}
 --- !u!1 &468592017
 GameObject:
   m_ObjectHideFlags: 0
@@ -2408,6 +2448,7 @@ GameObject:
   - component: {fileID: 596947917}
   - component: {fileID: 596947916}
   - component: {fileID: 596947921}
+  - component: {fileID: 596947922}
   m_Layer: 6
   m_Name: Enemy_Beast
   m_TagString: Enemy
@@ -2578,7 +2619,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initState: 
-  states: []
+  states:
+  - ID: 
+    Actions:
+    - {fileID: 596947922}
+    Transitions: []
+--- !u!114 &596947922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 596947915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58b43007a3718604e9c58cafb9a82a3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1.5
+  wanderTime: 1
+  moveRange: {x: 2, y: 2}
 --- !u!1 &604810484
 GameObject:
   m_ObjectHideFlags: 0
@@ -2670,6 +2730,7 @@ GameObject:
   - component: {fileID: 674219478}
   - component: {fileID: 674219477}
   - component: {fileID: 674219482}
+  - component: {fileID: 674219483}
   m_Layer: 6
   m_Name: Enemy_Mushroom
   m_TagString: Enemy
@@ -2840,7 +2901,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initState: 
-  states: []
+  states:
+  - ID: 
+    Actions:
+    - {fileID: 674219483}
+    Transitions: []
+--- !u!114 &674219483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 674219476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58b43007a3718604e9c58cafb9a82a3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1.5
+  wanderTime: 1
+  moveRange: {x: 2, y: 2}
 --- !u!1 &706943049
 GameObject:
   m_ObjectHideFlags: 0
@@ -2855,6 +2935,7 @@ GameObject:
   - component: {fileID: 706943051}
   - component: {fileID: 706943050}
   - component: {fileID: 706943055}
+  - component: {fileID: 706943056}
   m_Layer: 6
   m_Name: Enemy_Cyclope
   m_TagString: Enemy
@@ -3025,7 +3106,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initState: 
-  states: []
+  states:
+  - ID: 
+    Actions:
+    - {fileID: 706943056}
+    Transitions: []
+--- !u!114 &706943056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 706943049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58b43007a3718604e9c58cafb9a82a3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1.5
+  wanderTime: 1
+  moveRange: {x: 2, y: 2}
 --- !u!1 &762623808
 GameObject:
   m_ObjectHideFlags: 0
@@ -3040,6 +3140,7 @@ GameObject:
   - component: {fileID: 762623810}
   - component: {fileID: 762623809}
   - component: {fileID: 762623814}
+  - component: {fileID: 762623815}
   m_Layer: 6
   m_Name: Enemy_Snake
   m_TagString: Enemy
@@ -3210,7 +3311,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initState: 
-  states: []
+  states:
+  - ID: 
+    Actions:
+    - {fileID: 762623815}
+    Transitions: []
+--- !u!114 &762623815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 762623808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58b43007a3718604e9c58cafb9a82a3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1.5
+  wanderTime: 1
+  moveRange: {x: 2, y: 2}
 --- !u!1 &793134054
 GameObject:
   m_ObjectHideFlags: 0
@@ -3225,6 +3345,7 @@ GameObject:
   - component: {fileID: 793134056}
   - component: {fileID: 793134055}
   - component: {fileID: 793134060}
+  - component: {fileID: 793134061}
   m_Layer: 6
   m_Name: Enemy_Slime
   m_TagString: Enemy
@@ -3395,7 +3516,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initState: 
-  states: []
+  states:
+  - ID: 
+    Actions:
+    - {fileID: 793134061}
+    Transitions: []
+--- !u!114 &793134061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 793134054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58b43007a3718604e9c58cafb9a82a3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1.5
+  wanderTime: 1
+  moveRange: {x: 2, y: 2}
 --- !u!1 &830350561
 GameObject:
   m_ObjectHideFlags: 0
@@ -5120,6 +5260,7 @@ GameObject:
   - component: {fileID: 1335297099}
   - component: {fileID: 1335297098}
   - component: {fileID: 1335297103}
+  - component: {fileID: 1335297104}
   m_Layer: 6
   m_Name: Enemy_Reptile
   m_TagString: Enemy
@@ -5290,7 +5431,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initState: 
-  states: []
+  states:
+  - ID: 
+    Actions:
+    - {fileID: 1335297104}
+    Transitions: []
+--- !u!114 &1335297104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1335297097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58b43007a3718604e9c58cafb9a82a3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1.5
+  wanderTime: 1
+  moveRange: {x: 2, y: 2}
 --- !u!1 &1444189551
 GameObject:
   m_ObjectHideFlags: 0
@@ -5386,7 +5546,7 @@ GameObject:
   - component: {fileID: 1512313815}
   - component: {fileID: 1512313818}
   - component: {fileID: 1512313819}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player_Ninja
   m_TagString: Untagged
   m_Icon: {fileID: 0}
