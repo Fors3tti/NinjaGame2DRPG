@@ -137,8 +137,8 @@ GameObject:
   - component: {fileID: 120834412}
   - component: {fileID: 120834416}
   - component: {fileID: 120834417}
-  - component: {fileID: 120834418}
   - component: {fileID: 120834419}
+  - component: {fileID: 120834420}
   m_Layer: 6
   m_Name: Enemy_Bamboo
   m_TagString: Enemy
@@ -269,7 +269,7 @@ Transform:
   m_GameObject: {fileID: 120834411}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.62, y: 3.98, z: 0.017014103}
+  m_LocalPosition: {x: -19.73, y: -0.79, z: 0.017014103}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -308,27 +308,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0451a97d2fed9d84a88dfaccb2fd4680, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initState: 
+  initState: Patrol
   states:
-  - ID: 
+  - ID: Patrol
     Actions:
-    - {fileID: 120834418}
+    - {fileID: 120834420}
     Transitions: []
---- !u!114 &120834418
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 120834411}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58b43007a3718604e9c58cafb9a82a3b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 1.5
-  wanderTime: 1
-  moveRange: {x: 2, y: 2}
 --- !u!114 &120834419
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -342,10 +327,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   points:
-  - {x: -1.5, y: 1.5, z: 0}
-  - {x: 1.5, y: 1.5, z: 0}
-  - {x: -1.5, y: -1.5, z: 0}
-  - {x: 1.5, y: -1.5, z: 0}
+  - {x: 1, y: 1, z: 0}
+  - {x: 4, y: 1, z: 0}
+  - {x: 4, y: -2, z: 0}
+  - {x: 1, y: -2, z: 0}
+--- !u!114 &120834420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 120834411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24a640599bcf49c4698920fb92b83f98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1.5
 --- !u!1 &209070708
 GameObject:
   m_ObjectHideFlags: 0
