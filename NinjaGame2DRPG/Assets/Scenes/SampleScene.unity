@@ -140,6 +140,7 @@ GameObject:
   - component: {fileID: 120834419}
   - component: {fileID: 120834420}
   - component: {fileID: 120834421}
+  - component: {fileID: 120834422}
   m_Layer: 6
   m_Name: Enemy_Bamboo
   m_TagString: Enemy
@@ -319,7 +320,8 @@ MonoBehaviour:
       TrueState: Chase
       FalseState: 
   - ID: Chase
-    Actions: []
+    Actions:
+    - {fileID: 120834422}
     Transitions:
     - Decision: {fileID: 120834421}
       TrueState: 
@@ -370,6 +372,19 @@ MonoBehaviour:
   playerMask:
     serializedVersion: 2
     m_Bits: 128
+--- !u!114 &120834422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 120834411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 187f13376ec1a184e9c85208d1e4ffb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chaseSpeed: 2
 --- !u!1 &209070708
 GameObject:
   m_ObjectHideFlags: 0
@@ -1443,6 +1458,7 @@ GameObject:
   - component: {fileID: 430267794}
   - component: {fileID: 430267795}
   - component: {fileID: 430267796}
+  - component: {fileID: 430267797}
   m_Layer: 6
   m_Name: Enemy_Flam
   m_TagString: Enemy
@@ -1622,7 +1638,8 @@ MonoBehaviour:
       TrueState: Chase
       FalseState: 
   - ID: Chase
-    Actions: []
+    Actions:
+    - {fileID: 430267797}
     Transitions:
     - Decision: {fileID: 430267796}
       TrueState: 
@@ -1658,6 +1675,19 @@ MonoBehaviour:
   playerMask:
     serializedVersion: 2
     m_Bits: 128
+--- !u!114 &430267797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 430267788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 187f13376ec1a184e9c85208d1e4ffb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chaseSpeed: 2
 --- !u!1 &468592017
 GameObject:
   m_ObjectHideFlags: 0
@@ -2519,6 +2549,7 @@ GameObject:
   - component: {fileID: 596947923}
   - component: {fileID: 596947922}
   - component: {fileID: 596947924}
+  - component: {fileID: 596947925}
   m_Layer: 6
   m_Name: Enemy_Beast
   m_TagString: Enemy
@@ -2698,7 +2729,8 @@ MonoBehaviour:
       TrueState: Chase
       FalseState: 
   - ID: Chase
-    Actions: []
+    Actions:
+    - {fileID: 596947925}
     Transitions:
     - Decision: {fileID: 596947924}
       TrueState: 
@@ -2747,6 +2779,19 @@ MonoBehaviour:
   playerMask:
     serializedVersion: 2
     m_Bits: 128
+--- !u!114 &596947925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 596947915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 187f13376ec1a184e9c85208d1e4ffb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chaseSpeed: 2
 --- !u!1 &604810484
 GameObject:
   m_ObjectHideFlags: 0
@@ -2841,6 +2886,7 @@ GameObject:
   - component: {fileID: 674219484}
   - component: {fileID: 674219483}
   - component: {fileID: 674219485}
+  - component: {fileID: 674219486}
   m_Layer: 6
   m_Name: Enemy_Mushroom
   m_TagString: Enemy
@@ -3020,7 +3066,8 @@ MonoBehaviour:
       TrueState: Chase
       FalseState: 
   - ID: Chase
-    Actions: []
+    Actions:
+    - {fileID: 674219486}
     Transitions:
     - Decision: {fileID: 674219485}
       TrueState: 
@@ -3069,6 +3116,19 @@ MonoBehaviour:
   playerMask:
     serializedVersion: 2
     m_Bits: 128
+--- !u!114 &674219486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 674219476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 187f13376ec1a184e9c85208d1e4ffb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chaseSpeed: 2
 --- !u!1 &706943049
 GameObject:
   m_ObjectHideFlags: 0
@@ -3085,6 +3145,7 @@ GameObject:
   - component: {fileID: 706943055}
   - component: {fileID: 706943056}
   - component: {fileID: 706943057}
+  - component: {fileID: 706943058}
   m_Layer: 6
   m_Name: Enemy_Cyclope
   m_TagString: Enemy
@@ -3264,7 +3325,8 @@ MonoBehaviour:
       TrueState: Chase
       FalseState: 
   - ID: Chase
-    Actions: []
+    Actions:
+    - {fileID: 706943058}
     Transitions:
     - Decision: {fileID: 706943057}
       TrueState: 
@@ -3300,6 +3362,19 @@ MonoBehaviour:
   playerMask:
     serializedVersion: 2
     m_Bits: 128
+--- !u!114 &706943058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 706943049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 187f13376ec1a184e9c85208d1e4ffb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chaseSpeed: 2
 --- !u!1 &762623808
 GameObject:
   m_ObjectHideFlags: 0
@@ -3316,6 +3391,7 @@ GameObject:
   - component: {fileID: 762623814}
   - component: {fileID: 762623815}
   - component: {fileID: 762623816}
+  - component: {fileID: 762623817}
   m_Layer: 6
   m_Name: Enemy_Snake
   m_TagString: Enemy
@@ -3495,7 +3571,8 @@ MonoBehaviour:
       TrueState: Chase
       FalseState: 
   - ID: Chase
-    Actions: []
+    Actions:
+    - {fileID: 762623817}
     Transitions:
     - Decision: {fileID: 762623816}
       TrueState: 
@@ -3531,6 +3608,19 @@ MonoBehaviour:
   playerMask:
     serializedVersion: 2
     m_Bits: 128
+--- !u!114 &762623817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 762623808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 187f13376ec1a184e9c85208d1e4ffb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chaseSpeed: 2
 --- !u!1 &793134054
 GameObject:
   m_ObjectHideFlags: 0
@@ -3547,6 +3637,7 @@ GameObject:
   - component: {fileID: 793134060}
   - component: {fileID: 793134061}
   - component: {fileID: 793134062}
+  - component: {fileID: 793134063}
   m_Layer: 6
   m_Name: Enemy_Slime
   m_TagString: Enemy
@@ -3726,7 +3817,8 @@ MonoBehaviour:
       TrueState: Chase
       FalseState: 
   - ID: Chase
-    Actions: []
+    Actions:
+    - {fileID: 793134063}
     Transitions:
     - Decision: {fileID: 793134062}
       TrueState: 
@@ -3762,6 +3854,19 @@ MonoBehaviour:
   playerMask:
     serializedVersion: 2
     m_Bits: 128
+--- !u!114 &793134063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 793134054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 187f13376ec1a184e9c85208d1e4ffb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chaseSpeed: 2
 --- !u!1 &830350561
 GameObject:
   m_ObjectHideFlags: 0
@@ -6163,6 +6268,7 @@ GameObject:
   - component: {fileID: 1335297105}
   - component: {fileID: 1335297104}
   - component: {fileID: 1335297106}
+  - component: {fileID: 1335297107}
   m_Layer: 6
   m_Name: Enemy_Reptile
   m_TagString: Enemy
@@ -6342,7 +6448,8 @@ MonoBehaviour:
       TrueState: Chase
       FalseState: 
   - ID: Chase
-    Actions: []
+    Actions:
+    - {fileID: 1335297107}
     Transitions:
     - Decision: {fileID: 1335297106}
       TrueState: 
@@ -6393,6 +6500,19 @@ MonoBehaviour:
   playerMask:
     serializedVersion: 2
     m_Bits: 128
+--- !u!114 &1335297107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1335297097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 187f13376ec1a184e9c85208d1e4ffb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chaseSpeed: 2
 --- !u!1 &1444189551
 GameObject:
   m_ObjectHideFlags: 0
@@ -6556,7 +6676,7 @@ Transform:
   m_GameObject: {fileID: 1512313809}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 24.13, y: 0.35, z: 0}
+  m_LocalPosition: {x: -0.35, y: 1.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
