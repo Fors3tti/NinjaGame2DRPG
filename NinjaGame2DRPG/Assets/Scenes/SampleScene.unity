@@ -1442,6 +1442,7 @@ GameObject:
   - component: {fileID: 430267789}
   - component: {fileID: 430267794}
   - component: {fileID: 430267795}
+  - component: {fileID: 430267796}
   m_Layer: 6
   m_Name: Enemy_Flam
   m_TagString: Enemy
@@ -1611,12 +1612,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0451a97d2fed9d84a88dfaccb2fd4680, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initState: 
+  initState: Wander
   states:
-  - ID: 
+  - ID: Wander
     Actions:
     - {fileID: 430267795}
-    Transitions: []
+    Transitions:
+    - Decision: {fileID: 430267796}
+      TrueState: Chase
+      FalseState: 
+  - ID: Chase
+    Actions: []
+    Transitions:
+    - Decision: {fileID: 430267796}
+      TrueState: 
+      FalseState: Wander
 --- !u!114 &430267795
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1629,9 +1639,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58b43007a3718604e9c58cafb9a82a3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1.5
-  wanderTime: 1
-  moveRange: {x: 2, y: 2}
+  speed: 5
+  wanderTime: 2
+  moveRange: {x: 2.5, y: 2.5}
+--- !u!114 &430267796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 430267788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e179b0c860065c46a281202ef5dd66d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 3
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!1 &468592017
 GameObject:
   m_ObjectHideFlags: 0
@@ -2492,6 +2518,7 @@ GameObject:
   - component: {fileID: 596947921}
   - component: {fileID: 596947923}
   - component: {fileID: 596947922}
+  - component: {fileID: 596947924}
   m_Layer: 6
   m_Name: Enemy_Beast
   m_TagString: Enemy
@@ -2666,7 +2693,16 @@ MonoBehaviour:
   - ID: Patrol
     Actions:
     - {fileID: 596947922}
-    Transitions: []
+    Transitions:
+    - Decision: {fileID: 596947924}
+      TrueState: Chase
+      FalseState: 
+  - ID: Chase
+    Actions: []
+    Transitions:
+    - Decision: {fileID: 596947924}
+      TrueState: 
+      FalseState: Patrol
 --- !u!114 &596947922
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2679,7 +2715,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24a640599bcf49c4698920fb92b83f98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 1.5
 --- !u!114 &596947923
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2695,6 +2731,22 @@ MonoBehaviour:
   points:
   - {x: 0, y: 0, z: 0}
   - {x: 4, y: 0, z: 0}
+--- !u!114 &596947924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 596947915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e179b0c860065c46a281202ef5dd66d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 3
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!1 &604810484
 GameObject:
   m_ObjectHideFlags: 0
@@ -2788,6 +2840,7 @@ GameObject:
   - component: {fileID: 674219482}
   - component: {fileID: 674219484}
   - component: {fileID: 674219483}
+  - component: {fileID: 674219485}
   m_Layer: 6
   m_Name: Enemy_Mushroom
   m_TagString: Enemy
@@ -2962,7 +3015,16 @@ MonoBehaviour:
   - ID: Patrol
     Actions:
     - {fileID: 674219483}
-    Transitions: []
+    Transitions:
+    - Decision: {fileID: 674219485}
+      TrueState: Chase
+      FalseState: 
+  - ID: Chase
+    Actions: []
+    Transitions:
+    - Decision: {fileID: 674219485}
+      TrueState: 
+      FalseState: Patrol
 --- !u!114 &674219483
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2991,6 +3053,22 @@ MonoBehaviour:
   points:
   - {x: -1, y: 3, z: 0}
   - {x: -1, y: -3, z: 0}
+--- !u!114 &674219485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 674219476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e179b0c860065c46a281202ef5dd66d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 2.5
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!1 &706943049
 GameObject:
   m_ObjectHideFlags: 0
@@ -3176,7 +3254,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0451a97d2fed9d84a88dfaccb2fd4680, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initState: 
+  initState: Wander
   states:
   - ID: Wander
     Actions:
@@ -3189,8 +3267,8 @@ MonoBehaviour:
     Actions: []
     Transitions:
     - Decision: {fileID: 706943057}
-      TrueState: Wander
-      FalseState: 
+      TrueState: 
+      FalseState: Wander
 --- !u!114 &706943056
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3203,7 +3281,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58b43007a3718604e9c58cafb9a82a3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1.5
+  speed: 2
   wanderTime: 1
   moveRange: {x: 2, y: 2}
 --- !u!114 &706943057
@@ -3237,6 +3315,7 @@ GameObject:
   - component: {fileID: 762623809}
   - component: {fileID: 762623814}
   - component: {fileID: 762623815}
+  - component: {fileID: 762623816}
   m_Layer: 6
   m_Name: Enemy_Snake
   m_TagString: Enemy
@@ -3406,12 +3485,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0451a97d2fed9d84a88dfaccb2fd4680, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initState: 
+  initState: Wander
   states:
-  - ID: 
+  - ID: Wander
     Actions:
     - {fileID: 762623815}
-    Transitions: []
+    Transitions:
+    - Decision: {fileID: 762623816}
+      TrueState: Chase
+      FalseState: 
+  - ID: Chase
+    Actions: []
+    Transitions:
+    - Decision: {fileID: 762623816}
+      TrueState: 
+      FalseState: Wander
 --- !u!114 &762623815
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3427,6 +3515,22 @@ MonoBehaviour:
   speed: 1.5
   wanderTime: 1
   moveRange: {x: 2, y: 2}
+--- !u!114 &762623816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 762623808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e179b0c860065c46a281202ef5dd66d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 4
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!1 &793134054
 GameObject:
   m_ObjectHideFlags: 0
@@ -3442,6 +3546,7 @@ GameObject:
   - component: {fileID: 793134055}
   - component: {fileID: 793134060}
   - component: {fileID: 793134061}
+  - component: {fileID: 793134062}
   m_Layer: 6
   m_Name: Enemy_Slime
   m_TagString: Enemy
@@ -3611,12 +3716,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0451a97d2fed9d84a88dfaccb2fd4680, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initState: 
+  initState: Wander
   states:
-  - ID: 
+  - ID: Wander
     Actions:
     - {fileID: 793134061}
-    Transitions: []
+    Transitions:
+    - Decision: {fileID: 793134062}
+      TrueState: Chase
+      FalseState: 
+  - ID: Chase
+    Actions: []
+    Transitions:
+    - Decision: {fileID: 793134062}
+      TrueState: 
+      FalseState: Wander
 --- !u!114 &793134061
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3632,6 +3746,22 @@ MonoBehaviour:
   speed: 1.5
   wanderTime: 1
   moveRange: {x: 2, y: 2}
+--- !u!114 &793134062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 793134054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e179b0c860065c46a281202ef5dd66d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 2.5
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!1 &830350561
 GameObject:
   m_ObjectHideFlags: 0
@@ -6032,6 +6162,7 @@ GameObject:
   - component: {fileID: 1335297103}
   - component: {fileID: 1335297105}
   - component: {fileID: 1335297104}
+  - component: {fileID: 1335297106}
   m_Layer: 6
   m_Name: Enemy_Reptile
   m_TagString: Enemy
@@ -6206,7 +6337,16 @@ MonoBehaviour:
   - ID: Patrol
     Actions:
     - {fileID: 1335297104}
-    Transitions: []
+    Transitions:
+    - Decision: {fileID: 1335297106}
+      TrueState: Chase
+      FalseState: 
+  - ID: Chase
+    Actions: []
+    Transitions:
+    - Decision: {fileID: 1335297106}
+      TrueState: 
+      FalseState: Patrol
 --- !u!114 &1335297104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6219,7 +6359,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24a640599bcf49c4698920fb92b83f98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1.5
+  speed: 2
 --- !u!114 &1335297105
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6235,8 +6375,24 @@ MonoBehaviour:
   points:
   - {x: 0, y: 2.5, z: 0}
   - {x: 7, y: 2.5, z: 0}
-  - {x: 0, y: -2.5, z: 0}
   - {x: 7, y: -2.5, z: 0}
+  - {x: 0, y: -2.5, z: 0}
+--- !u!114 &1335297106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1335297097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e179b0c860065c46a281202ef5dd66d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 2.5
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!1 &1444189551
 GameObject:
   m_ObjectHideFlags: 0
@@ -6400,7 +6556,7 @@ Transform:
   m_GameObject: {fileID: 1512313809}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 24.13, y: 0.35, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6418,7 +6574,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41b9f91123c8f8045aba41618ca498c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 6
+  speed: 5
 --- !u!50 &1512313813
 Rigidbody2D:
   serializedVersion: 4
