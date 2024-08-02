@@ -142,6 +142,7 @@ GameObject:
   - component: {fileID: 120834421}
   - component: {fileID: 120834422}
   - component: {fileID: 120834423}
+  - component: {fileID: 120834424}
   m_Layer: 6
   m_Name: Enemy_Bamboo
   m_TagString: Enemy
@@ -331,7 +332,8 @@ MonoBehaviour:
       TrueState: Attack
       FalseState: 
   - ID: Attack
-    Actions: []
+    Actions:
+    - {fileID: 120834424}
     Transitions:
     - Decision: {fileID: 120834423}
       TrueState: 
@@ -411,6 +413,20 @@ MonoBehaviour:
   playerMask:
     serializedVersion: 2
     m_Bits: 128
+--- !u!114 &120834424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 120834411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 805a24d37c3870b4e9331b79c5311a35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 2
+  timeBtwAttacks: 1
 --- !u!1 &209070708
 GameObject:
   m_ObjectHideFlags: 0
@@ -1486,6 +1502,7 @@ GameObject:
   - component: {fileID: 430267796}
   - component: {fileID: 430267797}
   - component: {fileID: 430267798}
+  - component: {fileID: 430267799}
   m_Layer: 6
   m_Name: Enemy_Flam
   m_TagString: Enemy
@@ -1675,7 +1692,8 @@ MonoBehaviour:
       TrueState: Attack
       FalseState: 
   - ID: Attack
-    Actions: []
+    Actions:
+    - {fileID: 430267799}
     Transitions:
     - Decision: {fileID: 430267798}
       TrueState: 
@@ -1740,6 +1758,20 @@ MonoBehaviour:
   playerMask:
     serializedVersion: 2
     m_Bits: 128
+--- !u!114 &430267799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 430267788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 805a24d37c3870b4e9331b79c5311a35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 2
+  timeBtwAttacks: 1
 --- !u!1 &468592017
 GameObject:
   m_ObjectHideFlags: 0
@@ -2638,6 +2670,7 @@ GameObject:
   - component: {fileID: 596947924}
   - component: {fileID: 596947925}
   - component: {fileID: 596947926}
+  - component: {fileID: 596947927}
   m_Layer: 6
   m_Name: Enemy_Beast
   m_TagString: Enemy
@@ -2827,7 +2860,8 @@ MonoBehaviour:
       TrueState: Attack
       FalseState: 
   - ID: Attack
-    Actions: []
+    Actions:
+    - {fileID: 596947927}
     Transitions:
     - Decision: {fileID: 596947926}
       TrueState: 
@@ -2905,6 +2939,20 @@ MonoBehaviour:
   playerMask:
     serializedVersion: 2
     m_Bits: 128
+--- !u!114 &596947927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 596947915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 805a24d37c3870b4e9331b79c5311a35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 2
+  timeBtwAttacks: 1
 --- !u!1 &604810484
 GameObject:
   m_ObjectHideFlags: 0
@@ -3001,6 +3049,7 @@ GameObject:
   - component: {fileID: 674219485}
   - component: {fileID: 674219486}
   - component: {fileID: 674219487}
+  - component: {fileID: 674219488}
   m_Layer: 6
   m_Name: Enemy_Mushroom
   m_TagString: Enemy
@@ -3190,7 +3239,8 @@ MonoBehaviour:
       TrueState: Attack
       FalseState: 
   - ID: Attack
-    Actions: []
+    Actions:
+    - {fileID: 674219488}
     Transitions:
     - Decision: {fileID: 674219487}
       TrueState: 
@@ -3268,6 +3318,20 @@ MonoBehaviour:
   playerMask:
     serializedVersion: 2
     m_Bits: 128
+--- !u!114 &674219488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 674219476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 805a24d37c3870b4e9331b79c5311a35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 2
+  timeBtwAttacks: 1
 --- !u!1 &706943049
 GameObject:
   m_ObjectHideFlags: 0
@@ -3286,6 +3350,7 @@ GameObject:
   - component: {fileID: 706943057}
   - component: {fileID: 706943058}
   - component: {fileID: 706943059}
+  - component: {fileID: 706943060}
   m_Layer: 6
   m_Name: Enemy_Cyclope
   m_TagString: Enemy
@@ -3475,7 +3540,8 @@ MonoBehaviour:
       TrueState: Attack
       FalseState: 
   - ID: Attack
-    Actions: []
+    Actions:
+    - {fileID: 706943060}
     Transitions:
     - Decision: {fileID: 706943059}
       TrueState: 
@@ -3540,6 +3606,20 @@ MonoBehaviour:
   playerMask:
     serializedVersion: 2
     m_Bits: 128
+--- !u!114 &706943060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 706943049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 805a24d37c3870b4e9331b79c5311a35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 2
+  timeBtwAttacks: 1
 --- !u!1 &762623808
 GameObject:
   m_ObjectHideFlags: 0
@@ -3558,6 +3638,7 @@ GameObject:
   - component: {fileID: 762623816}
   - component: {fileID: 762623817}
   - component: {fileID: 762623818}
+  - component: {fileID: 762623819}
   m_Layer: 6
   m_Name: Enemy_Snake
   m_TagString: Enemy
@@ -3747,7 +3828,8 @@ MonoBehaviour:
       TrueState: Attack
       FalseState: 
   - ID: Attack
-    Actions: []
+    Actions:
+    - {fileID: 762623819}
     Transitions:
     - Decision: {fileID: 762623818}
       TrueState: 
@@ -3812,6 +3894,20 @@ MonoBehaviour:
   playerMask:
     serializedVersion: 2
     m_Bits: 128
+--- !u!114 &762623819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 762623808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 805a24d37c3870b4e9331b79c5311a35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 2
+  timeBtwAttacks: 1
 --- !u!1 &793134054
 GameObject:
   m_ObjectHideFlags: 0
@@ -3830,6 +3926,7 @@ GameObject:
   - component: {fileID: 793134062}
   - component: {fileID: 793134063}
   - component: {fileID: 793134064}
+  - component: {fileID: 793134065}
   m_Layer: 6
   m_Name: Enemy_Slime
   m_TagString: Enemy
@@ -4019,7 +4116,8 @@ MonoBehaviour:
       TrueState: Attack
       FalseState: 
   - ID: Attack
-    Actions: []
+    Actions:
+    - {fileID: 793134065}
     Transitions:
     - Decision: {fileID: 793134064}
       TrueState: 
@@ -4084,6 +4182,20 @@ MonoBehaviour:
   playerMask:
     serializedVersion: 2
     m_Bits: 128
+--- !u!114 &793134065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 793134054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 805a24d37c3870b4e9331b79c5311a35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 2
+  timeBtwAttacks: 1
 --- !u!1 &830350561
 GameObject:
   m_ObjectHideFlags: 0
@@ -6487,6 +6599,7 @@ GameObject:
   - component: {fileID: 1335297106}
   - component: {fileID: 1335297107}
   - component: {fileID: 1335297108}
+  - component: {fileID: 1335297109}
   m_Layer: 6
   m_Name: Enemy_Reptile
   m_TagString: Enemy
@@ -6676,7 +6789,8 @@ MonoBehaviour:
       TrueState: Attack
       FalseState: 
   - ID: Attack
-    Actions: []
+    Actions:
+    - {fileID: 1335297109}
     Transitions:
     - Decision: {fileID: 1335297108}
       TrueState: 
@@ -6756,6 +6870,20 @@ MonoBehaviour:
   playerMask:
     serializedVersion: 2
     m_Bits: 128
+--- !u!114 &1335297109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1335297097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 805a24d37c3870b4e9331b79c5311a35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 2
+  timeBtwAttacks: 1
 --- !u!1 &1444189551
 GameObject:
   m_ObjectHideFlags: 0
@@ -18451,10 +18579,10 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 519420032}
+  - {fileID: 1546313487}
   - {fileID: 1512313811}
   - {fileID: 282381954}
   - {fileID: 1260247208}
   - {fileID: 1966155733}
   - {fileID: 1631630422}
   - {fileID: 1558310968}
-  - {fileID: 1546313487}
