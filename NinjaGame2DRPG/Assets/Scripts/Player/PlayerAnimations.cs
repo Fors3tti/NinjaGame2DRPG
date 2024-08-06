@@ -27,6 +27,11 @@ public class PlayerAnimations : MonoBehaviour
         animator.SetFloat("MoveY", dir.y);
     }
 
+    public void SetAttackAnimation(bool value)
+    {
+        animator.SetBool("Attacking", value);
+    }
+
     public void ResetPlayer()
     {
         SetMoveAnimation(Vector2.down);
