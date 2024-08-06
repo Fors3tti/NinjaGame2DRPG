@@ -7905,6 +7905,7 @@ GameObject:
   - component: {fileID: 1512313815}
   - component: {fileID: 1512313818}
   - component: {fileID: 1512313819}
+  - component: {fileID: 1512313821}
   m_Layer: 7
   m_Name: Player_Ninja
   m_TagString: Untagged
@@ -8144,6 +8145,18 @@ CircleCollider2D:
   m_Offset: {x: 0.0028758645, y: -0.14074987}
   serializedVersion: 2
   m_Radius: 0.35487843
+--- !u!114 &1512313821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1512313809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a74cdb0db807d5438db48367077c6f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1546313485
 GameObject:
   m_ObjectHideFlags: 0
